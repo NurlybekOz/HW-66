@@ -73,10 +73,11 @@ const FoodForm: React.FC<Props> = ({isEdit = false, onSubmitAction, idFood}) => 
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 name='time'
-                                value={form.time}
+                                value={form.time || 'default'}
                                 label="time"
                                 onChange={onInputChange}
                             >
+                                <MenuItem value='default' disabled>Meal time</MenuItem>
                                 <MenuItem value='breakfast'>BreakFast</MenuItem>
                                 <MenuItem value='snack'>Snack</MenuItem>
                                 <MenuItem value='lunch'>Lunch</MenuItem>
